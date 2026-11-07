@@ -1,0 +1,16 @@
+[package]
+name = "klp-watch-ebpf"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+klp-watch-common = { path = "../klp-watch-common" }
+
+aya-ebpf = { workspace = true }
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "klp-watch"
+path = "src/main.rs"
